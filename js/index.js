@@ -1,45 +1,26 @@
 
-const section = document.querySelector('.container');
-const h1 = document.createElement('h1');
-const div = document.createElement('div');
-div.classList.add('row');
-const input = document.createElement('input');
-const Add = document.createElement('button');
-Add.appendChild(document.createTextNode('Adicionar'));
-const taskList = document.createElement('div');
-const li = document.createElement('li');
-const ul = document.createElement('ul');
+const input = document.querySelector('.inputTask').value;
+const addButton = document.querySelector('.addTaskButton');
+const taskList = document.querySelector('.taskList');
 
-h1.appendChild(document.createTextNode('Lista de tarefas'));
-section.appendChild(h1);
-section.appendChild(div);
-div.appendChild(input);
-div.appendChild(Add);
-section.appendChild(taskList);
-taskList.appendChild(li);
-
-function criaLi() {
-    let ul = document.createElement('ul');
-    return ul;
+const newLi = () =>{
+    let li = document.createElement('li');
+    return li;
 }
 
-function criaButton(text) {
-    const bt = document.createElement('button');
-    bt.appendChild(document.createTextNode(text));
-    bt.classList.add('rowButtons');
+const newTask = () =>{
+    let li = newLi();
+    let bt = createButtoRemove();
+    li.appendChild(document.createTextNode(input+' '));
+    li.appendChild(bt);
+    taskList.appendChild(li);
+}
+
+const createButtoRemove = () =>{
+    let bt = document.createElement('button');
+    bt.innerText = ' Remover';
+    bt.setAttribute('class', 'btRemove');
     return bt;
 }
 
-Add.addEventListener('click', ()=>{
-    let ul = criaLi();
-    let remove = criaButton('Remover');
-    ul.innerText = input.value;
-    ul.appendChild(remove);
-    li.appendChild(ul);
-    
-});
-
-let remove = document.querySelector('.rowButtons');
-remove.addEventListener('click', ()=>{
-    ul.removeChild(li);
-});
+addButton.addEventListener('click', newTask);
