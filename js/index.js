@@ -1,13 +1,18 @@
-let missao = 'Missão estrelar JS em execução!!!';
-let button = document.querySelector('.i');
+console.log('linha 1');
+//throw new Error('Ocorreu um erro na aplicação!');
+console.log('linha 3');
 
-function eventOnClick(){
-    alert('Button Clicado')
-};
+try {
+    console.log(soma(10, new Array(10)));
+} catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.stack);
 
-function eventLoad(){
-    alert('Evento onload disparado')
-};
+}finally{
+    console.log('Sempre será executado');
+}
 
-button.addEventListener('click', eventOnClick);
-window.addEventListener('load', eventLoad);
+function soma(a, b) {
+    return a.exec(20);
+}
