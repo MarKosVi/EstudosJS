@@ -1,18 +1,22 @@
-console.log('linha 1');
-//throw new Error('Ocorreu um erro na aplicação!');
-console.log('linha 3');
+//  Programação Sincrona e Assincrona
+//Sincrono
 
-try {
-    console.log(soma(10, new Array(10)));
-} catch (error) {
-    console.log(error.name);
-    console.log(error.message);
-    console.log(error.stack);
+let curso = 'Formação JavaScript Mestre Jedi';
+console.log(`Olá Bem vindo ao curso ${curso}`);
 
-}finally{
-    console.log('Sempre será executado');
+for(let i = 0; i <= 10; i++){
+    console.log(i);
 }
 
-function soma(a, b) {
-    return a.exec(20);
-}
+console.log(`Esse curso e 10!!`);
+
+//Assincrono
+
+console.log('Inicio programação Síncrona');
+// função timer programação assíncrona
+
+setTimeout(()=>{
+    console.log('Executando programação assíncrona')
+}, 2000);
+
+console.log('Terminada função Assíncrona');
