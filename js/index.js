@@ -1,5 +1,6 @@
 let missao = 'Missão estrelar JS ';
 let body = document.body;
+body.appendChild(document.createElement('h1')).innerHTML='1° Missão Estrelar JS';
 body.appendChild(document.createElement('button')).setAttribute('id', 'but');
 let but = document.querySelector('#but');
 but.innerHTML = 'Executar Missão' 
