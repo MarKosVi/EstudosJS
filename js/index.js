@@ -1,22 +1,13 @@
-//  Programação Sincrona e Assincrona
-//Sincrono
+let missao = 'Missão estrelar JS ';
+let body = document.body;
+body.appendChild(document.createElement('button')).setAttribute('id', 'but');
+let but = document.querySelector('#but');
+but.innerHTML = 'Executar Missão' 
 
-let curso = 'Formação JavaScript Mestre Jedi';
-console.log(`Olá Bem vindo ao curso ${curso}`);
 
-for(let i = 0; i <= 10; i++){
-    console.log(i);
-}
-
-console.log(`Esse curso e 10!!`);
-
-//Assincrono
-
-console.log('Inicio programação Síncrona');
-// função timer programação assíncrona
-
-setTimeout(()=>{
-    console.log('Executando programação assíncrona')
-}, 2000);
-
-console.log('Terminada função Assíncrona');
+body.addEventListener('load', (()=>{
+    console.log(`${missao} em Execução!!!`)
+})());
+but.addEventListener('click', ()=>{
+    console.log(`${missao} realizada com sucesso !!!`)
+});
