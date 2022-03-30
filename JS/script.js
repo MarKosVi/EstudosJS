@@ -26,6 +26,6 @@ let upInput = (opt) => {
     listSelect.appendChild(listOP);
  });
 
- //Listening inputs
+ //Listening input
  upInput(listSelect);
  upInput(nameBootInput);
